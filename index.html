@@ -23,18 +23,72 @@
                 </div>
 
     </div>
-    <div class="sortby__titel">Sortiere deine Notizen</div>
+    <h1>Persönliche Notizverwaltung</h1>
+    <div class="sortby__titel">Sortiere deine Notizen nach:</div>
     <ul class="sortby__wrapper">
-        <li class="sortyby__button sortyby__finish-date"></li>
-        <li class="sortyby__button sortyby__create-date"></li>
-        <li class="sortyby__button sortyby__importance"></li>
-        <li class="sortyby__button sortyby__finished"></li>
+        <li class="sortyby__button sortyby__finish-date">Enddatum</li>
+        <li class="sortyby__button sortyby__create-date">Erstellungsdatum</li>
+        <li class="sortyby__button sortyby__importance">Wichtigkeit</li>
+        <li class="sortyby__button sortyby__finished">geschlossene Notizen</li>
     </ul>
-    
-    <div class="notice__wrapper">
-        
-    </div>
+    <div class="notice__list-wrapper">
+        <div class="notice__wrapper">
+            <div class="notice__date">
+                Heute
+            </div>
+            <div class="notice__content">
+                <strong class="notice__content-titel">Lorem ipsum dolor sit amet</strong>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            </div>
+            <div class="notice__edit-wrapper">
+                <div class="notice__edit"></div>
+                <div class="notice__delete"></div>
+            </div>
 
+            <div class="notice__finished">
+                <input type="checkbox">
+            <label>Abgeschlossen</label>
+            </div>
+            <div class="notice__creation-date">Erstellt am: 02.11.2005</div>
+        </div>
+    </div>
 </div>
+
+<div class="modal-overlay">
+    <div class="overlay"></div>
+    <div class="modal-overlay__window">
+        <div class="modal-overlay__body">
+            <div class="modal-overlay__close"></div>
+            <div class="create-notice__wrapper">
+                <strong>Erstelle eine neue Notiz</strong>
+                <div class="create-notice__titel input-wrapper">
+
+                    <input type="text" value="">
+                    <label>Titel</label>
+                </div>
+                <div class="create-notice__content input-wrapper">
+
+                    <textarea></textarea>
+                    <label>Beschreibung</label>
+                </div>
+                <div class="create-notice__important-titel">Wichtigkeit</div>
+                <div class="create-notice__important">
+
+                    <span class="create-notice__important-button"></span>
+                    <span class="create-notice__important-button"></span>
+                    <span class="create-notice__important-button"></span>
+                    <span class="create-notice__important-button"></span>
+                    <span class="create-notice__important-button"></span>
+                </div>
+                <div class="create-notice__date input-wrapper">
+                    <input type="date">
+                    <label>Erledigen bis:</label>
+                </div>
+                <button class="modal-overlay__safe-button">Speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="javascript" type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
