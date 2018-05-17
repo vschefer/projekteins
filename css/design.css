@@ -1,0 +1,77 @@
+body.light{
+    background-color: #ffffff;
+}
+body.special .content{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+body.light .create-notice__important-button{
+    background-image: url("../images/star-unfilled-black.svg");
+}
+body.light .create-notice__important-button.important{
+    background-image: url("../images/star-filled-black.svg");
+}
+body.dark .create-notice__important-button{
+    background-image: url("../images/star-unfilled-white.svg");
+}
+body.dark .create-notice__important-button.important{
+    background-image: url("../images/star-filled-white.svg");
+}
+body.dark{
+    background-color: #585858;
+    color: #ffffff;
+}
+body.special{
+    background-image: url("../images/3574.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+body.dark .header__create-button{
+    background-image: url("../images/new-message-white.svg");
+}
+body.dark .sortyby__button{
+    background-color: black;
+}
+body.dark .notice__edit{
+    background: url("../images/settings-withe.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+body.dark .notice__delete{
+    background: url("../images/delete-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+body.dark .select-design{
+    border-color: #fff;
+}
+body.dark .select-design::after{
+    background-image: url("../images/layers-white.svg");
+
+}
+body.dark .notice__wrapper{
+    border-color: #fff;
+}
+
+body.special .modal-overlay__window{
+    border-radius: 100%;
+    width: 40rem;
+    height: 40rem;
+}
+body.special .modal-overlay__body{
+    padding: 8rem;
+}
+body.special .modal-overlay__close{
+    position: absolute;
+    background-image: url("../images/cancel-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+}
+body.special .modal-overlay input,body.special .modal-overlay textarea {
+    width: 15rem;
+}

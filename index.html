@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Notizen</title>
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/design.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
 </head>
-<body>
+<body class="light">
 <div class="content">
     <div class="header__wrapper">
-            <div class="header__create-button">Erstelle eine neue Notiz</div>
-            <div class="header__design-button white">
-                <div class="header__design-button-content">Wechsle zum Dunklem Design</div>
-            </div>
+            <div class="header__create-button"></div>
+
+                <div class="select-design">
+                    <p>Hell</p>
+                    <div class="select-design__option-wrapper">
+                        <span value="dark">Dunkel</span>
+                        <span value="light" selected>Hell</span>
+                        <span value="special">Fröhlich</span>
+                    </div>
+
+                </div>
+
     </div>
     <div class="sortby__titel">Sortiere deine Notizen</div>
     <ul class="sortby__wrapper">
