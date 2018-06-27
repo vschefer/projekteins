@@ -38,29 +38,6 @@ async function updateNote(noteid, formdata) {
 };
 
 
-async function archiveNote(noteid) {
-  try {
-    $.ajax({
-      method: 'POST',
-      url: '/notes/' + noteid + '/archive'
-    });
-  } catch (error) {
-    console.error(error);
-  };
-};
-
-async function unarchiveNote(noteid) {
-  try {
-    $.ajax({
-      method: 'POST',
-      url: '/notes/' + noteid + '/unarchive'
-    });
-  } catch (error) {
-    console.error(error);
-  };
-};
-
-
 async function deleteNote(noteid) {
   try {
     $.ajax({

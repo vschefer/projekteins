@@ -14,7 +14,6 @@
     init();
 
     $('.open-new-note').on('click', async function(event) {
-      $('.edit-note__title').html('Neue Notiz hinzufügen');
       $('.modal').removeData('update');
       $('.modal')[0].reset();
       await openEdit();
@@ -42,7 +41,6 @@
       $('[name=content]').val(note.content);
       $('[name=importance][value=' + note.importance + ']').attr('checked', 'checked');
       $('[name=date_due]').val(note.date_due);
-      $('.edit-note__title').html('Notiz bearbeiten');
       await openEdit();
     });
 

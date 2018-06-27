@@ -37,7 +37,6 @@
     <div class="modal__window">
     <div class="modal__body">
     <form class="modal">
-      <h2 class="edit-note__title">Neue Notiz hinzufügen</h2>
       <a class="cancel-note"></a>
       <div class="create__note">
        
@@ -98,11 +97,10 @@
         </div>
         <div class="note__content">
           <h3 class="note__title">{{ title }}</h3>
-          <p>{{ breaklines content }}</p>
         </div>
         <div class="note__bottom">
             <span class="{{ importance_in_words }}"></span>
-          <span class="note__created">Erstellt am {{ date_formatted }} um {{ time_formatted }} Uhr</span><br/>
+          <span class="note__created">Erstellt am {{ date_formatted }}</span><br/>
         </div>
       </li>
     {{/each}}
