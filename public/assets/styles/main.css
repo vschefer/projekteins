@@ -1,0 +1,252 @@
+body{
+    font-family: "Century Gothic";
+    font-size: 16px;
+    background: lavenderblush;
+    padding: 0 1rem;
+}
+.style--light{
+    filter: invert(1);
+    background: darkgray;
+}
+h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;  
+}
+header{
+    background: #dad2d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.switch-style{
+    font-weight: bold;
+    text-transform: uppercase; 
+}
+.open-new-note{
+    border: none;
+}
+.open-new-note__icon{
+    background: url('../images/pencil-case.svg');
+    background-size: contain;
+    display: inline-flex;
+    align-self: center;
+    margin-right: 0.2rem;
+    width: 2rem;
+    height: 2rem;
+}
+.container--black{
+    filter: invert(1);
+    background: black;
+}
+.hidden{
+    display: none;
+}
+h1{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.switch-style{
+    
+}
+.content{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:0 auto;
+    padding: 2rem;
+}
+
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 5rem 1rem;
+}
+button{
+    padding: 1rem 1rem;
+    background: transparent;
+}
+.select-design{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 8rem;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.select-design:focus{
+    outline: transparent;
+}
+.switch-status{
+    display: none;
+}
+.switch-status--active{
+    display: block;
+}
+.header__sort{
+    background: #f7f7f7;
+    padding: 2rem 0;
+}
+[data-sort]{
+    display: inline-flex;
+    align-self: center;
+    margin-right: 0.2rem;
+}
+[data-sort='duedate']{
+    background: url('../images/sand-clock.svg') no-repeat;
+    background-size: contain;
+}
+[data-sort='date']{
+    background: url('../images/calendar.svg') no-repeat;
+    background-size: contain;
+}
+[data-sort='importance']{
+    background: url('../images/heart.svg') no-repeat;
+    background-size: contain;
+}
+.notes__sort{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 20rem;
+    margin: 0 auto;
+    
+    margin-top: 2rem;
+}
+.sort-label{
+    width: 15rem;
+    margin: 0 auto;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sortBy{
+    text-decoration: none;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    outline: transparent;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.notice__content{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.notes__list{
+    padding: 0;
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 0;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem;
+    background: #fff;
+}
+.note__top{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.note__top span, .note__top a{
+    cursor: pointer;
+}
+.note__content{
+    padding: 2rem 0;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+.note__bottom{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gering{
+    background: url('../images/heart.svg') no-repeat;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+}
+.normal{
+    background: url('../images/doubleheart.svg') no-repeat;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+}
+.hoch{
+    background: url('../images/trippleheart.svg') no-repeat;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+}
+
+button.note__label, button.note__edit--edit, button.note__edit--delete{
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+}
+button.note__label .unfinish{
+    background: url('../../images/check-box-empty.svg') no-repeat; 
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+button.note__label .finish{
+    background: url('../../images/check-box.svg') no-repeat; 
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+.note__date-due .icon{
+    background: url('../images/alarm.svg') no-repeat; 
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    margin: 0 auto;
+}
+.note__top .text{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.load-edit .icon{
+    background: url('../images/eraser.svg') no-repeat; 
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    margin: 0 auto;
+}
+.archive-note .icon{
+    background: url('../images/delete.svg') no-repeat; 
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    margin: 0 auto;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="stylesheet" href="assets/styles/form.css">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="any">
+  <title>Meine Notizen</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>
+      <button class="open-new-note">
+        <span class="open-new-note__icon"></span>
+        <span class="text"></span>
+      </button>
+      <a class="switch-style">Dunkles Design</a>
+    </header>
+    <main class="notes">
+      <div class="header__sort">
+          <span class="sort-label">Sortieren deine Notiz</span>
+      <div class="notes__header">
+        <div class="notes__sort">
+          
+          <a class="sortBy sortBy--active" data-sort="duedate"></a>
+          <a class="sortBy" data-sort="date"></a>
+          <a class="sortBy" data-sort="importance"></a>
+        </div>
+      </div>
+    </div>
+      <ul class="notes__list"></ul>
+    </main>
+  </div>
+
+  <div class="edit-note">
+    <div class="modal__window">
+    <div class="modal__body">
+    <form class="modal">
+      <h2 class="edit-note__title">Neue Notiz hinzufügen</h2>
+      <a class="cancel-note"></a>
+      <div class="create__note">
+       
+        <input class="form__input" id="title" type="text" name="title" required autocomplete="off" placeholder="Titel">
+      </div>
+      <div class="create__note">
+        
+        <textarea class="form__input" id="content" name="content" autocomplete="off" placeholder="Inhalt der Notiz"></textarea>
+      </div>
+        <div class="create__note create__note--importance">
+          <div class="form__importance">
+            <div class="importance">
+              <input type="radio" class="important--1" id="importance-low" name="importance" value="1">
+              <label for="importance-low">
+              </label>
+            </div>
+            <div class="importance">
+              <input type="radio"  class="important--2" id="importance-normal" name="importance" value="2" checked>
+              <label for="importance-normal">
+              </label>
+            </div>
+            <div class="importance">
+              <input type="radio"  class="important--1" id="importance-high" name="importance" value="3">
+              <label for="importance-high">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="create__note create__note--date_due">
+          <label class="form__label" for="date_due">Zu erledigen bis</label>
+          <input class="form__input" id="date_due" type="date" name="date_due" required>
+        </div>
+      <div class="form__submit">
+        <button class="save-note" type="submit">Notiz speichern</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+
+  <script id="noteTemplate" type="text/x-handlebars-template">
+    {{#each this}}
+      <li class="note" data-id="{{ _id }}">
+        <div class="note__top">
+          <span class="note__date-due">
+            <span class="icon"></span>
+            <span class="text">Fällig {{ date_due_formatted }}</span>
+          </span>
+         
+          <a class="load-edit" data-note="{{ _id }}">
+              <span class="icon"></span>
+            <span class="text">Notiz bearbeiten</span>
+          </a>
+          <a class="archive-note small-button" data-note="{{ _id }}">
+              <span class="icon"></span>
+            <span class="text">Erledigt/Löschen</span>
+          </a>
+        </div>
+        <div class="note__content">
+          <h3 class="note__title">{{ title }}</h3>
+          <p>{{ breaklines content }}</p>
+        </div>
+        <div class="note__bottom">
+            <span class="{{ importance_in_words }}"></span>
+          <span class="note__created">Erstellt am {{ date_formatted }} um {{ time_formatted }} Uhr</span><br/>
+        </div>
+      </li>
+    {{/each}}
+  </script>
+  <script type="text/javascript" src="dist/scripts/main.min.js"></script>
+</body>
+</html>
