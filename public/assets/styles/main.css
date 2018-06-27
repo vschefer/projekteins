@@ -179,7 +179,7 @@ button{
     font-weight: bold;
     text-transform: uppercase;
 }
-.gering{
+.klein{
     background: url('../images/heart.svg') no-repeat;
     background-size: contain;
     width: 2rem;
